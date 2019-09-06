@@ -8,6 +8,8 @@ def shapemaker(length, sides):
         henryright(sides)
         sidecount += 1
 
+# compute the interior angle of a regular polygon with
+# 'sides' sides
 def interiorangle(sides):
     return ((sides - 2)*180)/sides
 
@@ -31,7 +33,3 @@ def prismmaker(length, depth, sides):
 #Argument 1 is the length of each side of the face, argument 2 is how far out the prism goes
 #argument 3 is how many sides the face has.
 prismmaker(100, 100, 7)
-
-
-
-
