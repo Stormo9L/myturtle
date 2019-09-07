@@ -15,7 +15,7 @@ def interiorangle(sides):
 
 def henryright(sides):
     x, y = pos()
-    cornerlist.append(((int(x), int(y))))
+    cornerlist.append((x,y))
     right(180 - interiorangle(sides))
 
 def prismmaker(length, depth, sides):
@@ -32,4 +32,4 @@ def prismmaker(length, depth, sides):
 
 #Argument 1 is the length of each side of the face, argument 2 is how far out the prism goes
 #argument 3 is how many sides the face has.
-prismmaker(100, 100, 7)
+prismmaker(50, 150, 21)
