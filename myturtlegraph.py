@@ -12,26 +12,20 @@ def drawaxis():
     right(180)
     forward(250)
     home()
-def findpoint(slope, yintercept):
-    penup()
-    forward(500)
-    if 1 / slope > 0:
-        left(90)
-        forward(slope * 500)
-    else:
-        right(90)
-        forward(abs(slope) * 500)
-    pendown()
-    goto(0, yintercept)
-
-def drawline(yintercept, slope):
-    goto(0, yintercept)
-    seth(180)
-    findpoint(slope, yintercept)
-    seth(0)
-    findpoint(slope, yintercept)
-    update()
+def drawline(slope, yintercept):
+    for i in range(2):
+        goto(0, yintercept)
+        penup()
+        forward(500)
+        if 1 / slope > 0:
+            left(90)
+            forward(slope * 500)
+        else:
+            right(90)
+            forward(abs(slope) * 500)
+        pendown()
+        right(180)
 
 drawaxis()
-drawline(50, -5)
+drawline(3, 50)
 mainloop()
