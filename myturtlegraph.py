@@ -24,8 +24,13 @@ def drawline(slope, yintercept):
             right(90)
             forward(abs(slope) * 500)
         pendown()
-        right(180)
+        goto(0, yintercept)
+        if 1 / slope > 0:
+            right(270) 
+        else:
+            right(90)
+        update()
 
 drawaxis()
-drawline(3, 50)
+drawline(4, 70)
 mainloop()
